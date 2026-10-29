@@ -1,0 +1,49 @@
+name: 分享社区作品
+description: 投稿梗图、插画、贴纸或其他鲸鱼娘二创
+title: "[社区作品] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎投稿！你不需要提交代码。请把作品图片直接拖进下方补充说明框，不要只留下聊天分享链接。提交后由维护者整理收录，处理结果会在这条 issue 中回复，网站不会在提交瞬间自动更新。
+  - type: input
+    id: work-name
+    attributes:
+      label: 作品名称或简短说明
+      placeholder: 例如：今天的鲸鱼娘也在努力省 Token
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: 作者
+      description: 请填写你的名字/账号；如果是他人作品，请填写原作者。不清楚时写“作者未知”。
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 原始来源链接
+      description: 原帖或原图链接；原创作品可填写“本人原创”。
+      placeholder: https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: handmade
+    attributes:
+      label: 作品是否为纯人工创作？
+      description: 手绘、手写、手工制作等未使用生成式 AI 的作品，可进入“能工智人古法手搓专区”。如果使用了 AI 生成或辅助，请选择相应选项。
+      options:
+        - 使用了生成式 AI 或 AI 辅助
+        - 纯人工创作（手绘、手写、手工制作等）
+        - 其他 / 不确定
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明
+      description: 请直接拖入作品图片；可以同时补充作品介绍、希望展示的署名或其他注意事项。
+      placeholder: 把图片拖到这里，等待上传完成后再提交。多张作品可一起上传。
+    validations:
+      required: true

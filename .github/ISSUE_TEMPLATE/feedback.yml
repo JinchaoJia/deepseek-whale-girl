@@ -1,0 +1,31 @@
+name: 反馈、纠错或补充
+description: 报告错误链接、信息更正、遗漏内容或提出建议
+title: "[反馈] "
+body:
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: 反馈类型
+      options:
+        - 信息有误或链接失效
+        - 作者或来源信息需要更正
+        - 内容涉及侵权，请求删除
+        - 希望补充的内容
+        - 页面使用建议
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 具体情况
+      description: 请尽量提供相关页面或图片链接，以及需要更正或处理的具体内容。
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: 相关链接（可选）
+      placeholder: https://...
+    validations:
+      required: false
